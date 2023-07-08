@@ -1,15 +1,21 @@
 import { motion } from 'framer-motion';
 import { FiX } from 'react-icons/fi';
 import Button from './reusable/Button';
+import React, { useContext, useRef } from "react";
+import { sendEmail } from './utils/utils';
+import NotificationContext from '../context/NotificationContext';
 
 const selectOptions = [
-	'Web Application',
+	'Frontend Application',
+	'Full-stack Web Application',
 	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
 ];
 
 const HireMeModal = ({ onClose, onRequest }) => {
+	const form = useRef();
+	const { notify } = useContext(NotificationContext)
+	
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -37,9 +43,13 @@ const HireMeModal = ({ onClose, onRequest }) => {
 						</div>
 						<div className="modal-body p-5 w-full h-full">
 							<form
-								onSubmit={(e) => {
-									e.preventDefault();
-								}}
+								ref={form}
+								onSubmit={(e)=>{
+									sendEmail(e,form)
+									notify('Email sent successfully!')
+									onClose()
+								}
+							}
 								className="max-w-xl m-4 text-left"
 							>
 								<div className="">
@@ -98,7 +108,7 @@ const HireMeModal = ({ onClose, onRequest }) => {
 
 								<div className="mt-6 pb-4 sm:pb-1">
 									<span
-										onClick={onClose}
+										// onClick={onClose}
 										type="submit"
 										className="px-4
 											sm:px-6
@@ -111,7 +121,7 @@ const HireMeModal = ({ onClose, onRequest }) => {
 											focus:ring-1 focus:ring-indigo-900 duration-500"
 										aria-label="Submit Request"
 									>
-										<Button title="Send Request" />
+										<Button title="Send Request" type='submit' />
 									</span>
 								</div>
 							</form>

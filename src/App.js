@@ -6,6 +6,8 @@ import AppFooter from './components/shared/AppFooter';
 import AppHeader from './components/shared/AppHeader';
 import './css/App.css';
 import UseScrollToTop from './hooks/useScrollToTop';
+import { NotificationProvider } from './context/NotificationContext';
+import Notification from './components/modals/Notification';
 
 const About = lazy(() => import('./pages/AboutMe'));
 const Contact = lazy(() => import('./pages/Contact.jsx'));
@@ -16,6 +18,9 @@ const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 
 function App() {
 	return (
+		<NotificationProvider>
+			
+			<Notification />
 		<AnimatePresence>
 			<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
 				<Router>
@@ -26,7 +31,7 @@ function App() {
 							<Route path="/" element={<Home />} />
 							<Route path="projects" element={<Projects />} />
 							<Route
-								path="projects/single-project"
+								path={`projects/single-project/:id`}
 								element={<ProjectSingle />}
 							/>
 
@@ -39,6 +44,7 @@ function App() {
 				<UseScrollToTop />
 			</div>
 		</AnimatePresence>
+		</NotificationProvider>
 	);
 }
 

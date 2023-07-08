@@ -1,37 +1,39 @@
 import {
 	FiGithub,
-	FiTwitter,
+	FiMail,
 	FiLinkedin,
-	FiGlobe,
-	FiYoutube,
+	FiFacebook,
 } from 'react-icons/fi';
+import {
+	FaWhatsapp
+} from 'react-icons/fa';
 import AppFooterCopyright from './AppFooterCopyright';
 
 const socialLinks = [
 	{
 		id: 1,
-		icon: <FiGlobe />,
-		url: 'https://www.stoman.me/',
+		icon: <FiGithub />,
+		url: 'http://github.com/omarfarids',
 	},
 	{
 		id: 2,
-		icon: <FiGithub />,
-		url: 'https://github.com/realstoman',
+		icon: <FiMail />,
+		url: 'mailto:omar.farid007@gmail.com',
 	},
 	{
 		id: 3,
-		icon: <FiTwitter />,
-		url: 'https://twitter.com/realstoman',
+		icon: <FaWhatsapp />,
+		url: 'https://wa.me/201013589948',
 	},
 	{
 		id: 4,
 		icon: <FiLinkedin />,
-		url: 'https://www.linkedin.com/in/realstoman',
+		url: 'https://www.linkedin.com/in/omar-farid-270436144/',
 	},
 	{
 		id: 5,
-		icon: <FiYoutube />,
-		url: 'https://www.youtube.com/c/realstoman',
+		icon: <FiFacebook />,
+		url: 'https://www.facebook.com/omar.elkanzy',
 	},
 ];
 

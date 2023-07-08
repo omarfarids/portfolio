@@ -1,13 +1,22 @@
 import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
+import React, { useContext, useRef } from "react";
+import { sendEmail } from '../utils/utils';
+import NotificationContext from '../../context/NotificationContext';
 
 const ContactForm = () => {
+	const form = useRef();
+	const {notify} = useContext(NotificationContext)
+
+
 	return (
 		<div className="w-full lg:w-1/2">
 			<div className="leading-loose">
 				<form
-					onSubmit={(e) => {
-						e.preventDefault();
+					ref={form}
+					onSubmit={(e)=>{
+						sendEmail(e,form)
+						notify('Email sent successfully!')
 					}}
 					className="max-w-xl m-4 p-6 sm:p-10 bg-secondary-light dark:bg-secondary-dark rounded-xl shadow-xl text-left"
 				>

@@ -1,12 +1,16 @@
 import { useState, createContext } from 'react';
-import { singleProjectData as singleProjectDataJson } from '../data/singleProjectData';
+import { projectsData } from '../data/projects';
+import { useParams } from 'react-router-dom';
+
 
 const SingleProjectContext = createContext();
 
 export const SingleProjectProvider = ({ children }) => {
+	const param = useParams()
 	const [singleProjectData, setSingleProjectData] = useState(
-		singleProjectDataJson
+		projectsData[param.id - 1]
 	);
+	console.log(projectsData[param.id - 1],param)
 
 	return (
 		<SingleProjectContext.Provider
