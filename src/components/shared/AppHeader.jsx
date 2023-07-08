@@ -44,7 +44,7 @@ const AppHeader = () => {
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
-						<Link to="/">
+						<Link to="/portfolio">
 							{activeTheme === 'dark' ? (
 								<h1 className='text-3xl text-black'>
 								<span className="capital-letter">O</span>mar
