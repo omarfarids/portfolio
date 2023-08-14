@@ -16,12 +16,12 @@ export const webDevelopingExperience = [
       ],
     },
     techStack: ["Typescript", "React", "Redux", "SASS", "MaterialUI"],
-    website: "first release is coming soon",
+    website: "https://front-end-dot.vercel.app/",
   },
   {
     companyName: "BMHM Co.",
     position: "Full-stack Developer",
-    duration: "1/2023 - 5/2023",
+    duration: "11/2022 - 5/2023",
     description: [
       "BMHM provides holistic and culturally sensitive mental healthcare And eradicate stigma services amongst Black communities.",
       "We build and maintain web applications, Troubleshoot and debug many features, and build new layouts and pages.",
@@ -39,9 +39,27 @@ export const webDevelopingExperience = [
     website: "http://bmhm.org/",
   },
   {
+    companyName: "Beacon",
+    position: "Frontend Developer",
+    duration: "2/2022 - 11/2022",
+    description: [
+      "Beacon is making it incredibly easy to plan your next social event while discovering your local social scene. Throw the best parties and find the coolest events for you and your friends!",
+    ],
+    responsible: {
+      info: "I worked along side with two frontend developers and a full-stack developer. I was responsible for:",
+      points: [
+        "Creating and updating UI.",
+        "Creating Functionality of the pages.",
+        "Connecting with the backend using APIs.",
+      ],
+    },
+    techStack: ["Typescript", "React", "Nextjs", "Bootstrap"],
+    website: "https://www.sendbeacon.com/",
+  },
+  {
     companyName: "Digital Move",
     position: "Frontend Developer",
-    duration: "8/2022 - 1/2023",
+    duration: "FreeLance",
     description: [
       "Digital move as a small agency which delivers many and various web applications to clients all over the world.",
       "We Write feature documentation and SDD, unit tests for many features, and performed code reviews.",
@@ -60,27 +78,9 @@ export const webDevelopingExperience = [
     website: "https://www.performs.app/",
   },
   {
-    companyName: "Beacon",
-    position: "Frontend Developer",
-    duration: "9/2021 - 8/2022",
-    description: [
-      "Beacon is making it incredibly easy to plan your next social event while discovering your local social scene. Throw the best parties and find the coolest events for you and your friends!",
-    ],
-    responsible: {
-      info: "I worked along side with two frontend developers and a full-stack developer. I was responsible for:",
-      points: [
-        "Creating and updating UI.",
-        "Creating Functionality of the pages.",
-        "Connecting with the backend using APIs.",
-      ],
-    },
-    techStack: ["Typescript", "React", "Nextjs", "Bootstrap"],
-    website: "https://www.sendbeacon.com/",
-  },
-  {
     companyName: "Atomic",
     position: "Frontend Developer",
-    duration: "6/2021 - 9/2021",
+    duration: "FreeLance",
     description: [
       "Atomic is a SaaS platform that lets developers create software orders of magnitude faster than they can now.",
     ],
