@@ -18,6 +18,7 @@ export const webDevelopingExperience = [
     techStack: ["Typescript", "React", "Redux", "SASS", "MaterialUI"],
     website: "https://front-end-dot.vercel.app/",
   },
+
   {
     companyName: "BMHM Co.",
     position: "Full-stack Developer",
